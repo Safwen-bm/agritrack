@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="AgriTrack.Api/AgriTrack.Api.csproj" />
+  <Project Path="AgriTrack.Tests/AgriTrack.Tests.csproj" />
+</Solution>
