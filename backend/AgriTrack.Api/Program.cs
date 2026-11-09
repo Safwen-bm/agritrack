@@ -49,6 +49,12 @@ builder.Services.AddScoped<TokenService>();
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
+// CORS: which websites may call this API from a browser
+var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>() ?? [];
+builder.Services.AddCors(options =>
+    options.AddDefaultPolicy(policy =>
+        policy.WithOrigins(allowedOrigins).AllowAnyHeader().AllowAnyMethod()));
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -58,6 +64,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors();
 app.UseAuthentication(); // must come before UseAuthorization
 app.UseAuthorization();
 app.MapControllers();
