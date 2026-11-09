@@ -77,3 +77,23 @@ export interface IrrigationEstimate {
   appliedVolumeM3: number
   differenceM3: number
 }
+
+export interface ProfitGroup { label: string; expenses: number; revenue: number; profit: number }
+
+export interface DashboardData {
+  summary: {
+    farmCount: number
+    fieldCount: number
+    totalAreaHectares: number
+    totalExpenses: number
+    totalRevenue: number
+    netProfit: number
+    totalWaterM3: number
+    totalHarvestKg: number
+  }
+  profitByCrop: ProfitGroup[]
+  profitBySeason: ProfitGroup[]
+  expensesByCategory: { category: string; amount: number }[]
+  waterByMonth: { month: string; volumeM3: number }[]
+  yields: { label: string; yieldKgPerHectare: number; totalKg: number }[]
+}

@@ -1,23 +1,31 @@
 // Built with help from Claude
-import { Link, Outlet, useNavigate } from 'react-router-dom'
-import { useAuth } from '../AuthContext'
+import { Link, Outlet, useNavigate } from "react-router-dom";
+import { useAuth } from "../AuthContext";
 
 export default function Layout() {
-  const { user, logout } = useAuth()
-  const navigate = useNavigate()
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
 
   function handleLogout() {
-    logout()
-    navigate('/login')
+    logout();
+    navigate("/login");
   }
 
   return (
     <div className="min-h-screen bg-green-50">
       <nav className="bg-green-800 text-white">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-          <Link to="/" className="text-xl font-bold">AgriTrack</Link>
+          <Link to="/" className="text-xl font-bold">
+            AgriTrack
+          </Link>
           {user && (
             <div className="flex items-center gap-4">
+              <Link to="/" className="text-sm hover:underline">
+                Dashboard
+              </Link>
+              <Link to="/farms" className="text-sm hover:underline">
+                Farms
+              </Link>
               <span className="hidden text-sm sm:inline">{user.fullName}</span>
               <button
                 onClick={handleLogout}
@@ -33,5 +41,5 @@ export default function Layout() {
         <Outlet />
       </main>
     </div>
-  )
+  );
 }
