@@ -26,6 +26,9 @@ export default function Layout() {
               <Link to="/farms" className="text-sm hover:underline">
                 Farms
               </Link>
+              <Link to="/map" className="text-sm hover:underline">
+                Map
+              </Link>
               <span className="hidden text-sm sm:inline">{user.fullName}</span>
               <button
                 onClick={handleLogout}

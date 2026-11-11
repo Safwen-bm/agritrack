@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import FarmDetail from "./pages/FarmDetail";
 import FieldDetail from "./pages/FieldDetail";
 import PlantingDetail from "./pages/PlantingDetail";
+import MapPage from "./pages/MapPage";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/farms/:farmId" element={<FarmDetail />} />
           <Route path="/fields/:fieldId" element={<FieldDetail />} />
           <Route path="/plantings/:plantingId" element={<PlantingDetail />} />
+          <Route path="/map" element={<MapPage />} />
         </Route>
       </Route>
     </Routes>

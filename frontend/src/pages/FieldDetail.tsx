@@ -3,6 +3,7 @@ import { useEffect, useState, type FormEvent } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../api";
 import type { CropType, FieldItem, Planting } from "../types";
+import WeatherCard from "../components/WeatherCard";
 
 export default function FieldDetail() {
   const { fieldId } = useParams();
@@ -164,6 +165,7 @@ export default function FieldDetail() {
           ))}
         </div>
       </section>
+      {fieldId && <WeatherCard fieldId={fieldId} />}
     </div>
   );
 }

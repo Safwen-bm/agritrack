@@ -16,6 +16,7 @@ import {
 import { api } from "../api";
 import ChartCard from "../components/ChartCard";
 import type { DashboardData, ProfitGroup } from "../types";
+import TasksCard from "../components/TasksCard";
 
 const COLORS = [
   "#15803d",
@@ -89,6 +90,8 @@ export default function Dashboard() {
         <StatCard label="Net profit" value={fmt(s.netProfit)} />
         <StatCard label="Water used" value={`${fmt(s.totalWaterM3)} m³`} />
       </div>
+
+      <TasksCard />
 
       <div className="grid gap-4 md:grid-cols-2">
         <ChartCard

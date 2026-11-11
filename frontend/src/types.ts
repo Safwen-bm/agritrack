@@ -97,3 +97,39 @@ export interface DashboardData {
   waterByMonth: { month: string; volumeM3: number }[]
   yields: { label: string; yieldKgPerHectare: number; totalKg: number }[]
 }
+
+export interface UpcomingTask {
+  date: string
+  type: string
+  title: string
+  stage: string
+  plantingId: number
+  cropName: string
+  fieldName: string
+}
+
+export interface MapPoint {
+  id: number
+  name: string
+  farmName: string
+  areaHectares: number
+  latitude: number
+  longitude: number
+  currentCrops: string[]
+}
+
+export interface DailyForecast {
+  date: string
+  tempMaxC: number
+  tempMinC: number
+  precipitationMm: number
+  windMaxKmh: number
+}
+
+export interface WeatherWarning { date: string; severity: string; message: string }
+
+export interface WeatherResponse {
+  fieldName: string
+  forecast: DailyForecast[]
+  warnings: WeatherWarning[]
+}
