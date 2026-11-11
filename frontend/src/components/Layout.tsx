@@ -1,6 +1,6 @@
 // Built with help from Claude
 import { Link, Outlet, useNavigate } from "react-router-dom";
-import { useAuth } from "../AuthContext";
+import { useAuth } from "../context/AuthContext";
 
 export default function Layout() {
   const { user, logout } = useAuth();

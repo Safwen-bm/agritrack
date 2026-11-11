@@ -1,7 +1,7 @@
 // Built with help from Claude
 import { useEffect, useState, type FormEvent } from "react";
 import { Link, useParams } from "react-router-dom";
-import { api } from "../api";
+import { api } from "../services/api";
 import type { CropType, FieldItem, Planting } from "../types";
 import WeatherCard from "../components/WeatherCard";
 

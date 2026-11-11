@@ -9,7 +9,7 @@ import {
   useMap,
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { api } from "../api";
+import { api } from "../services/api";
 import type { MapPoint } from "../types";
 
 // Zooms the map so every field is visible

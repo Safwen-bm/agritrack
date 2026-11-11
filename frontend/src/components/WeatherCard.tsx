@@ -1,6 +1,6 @@
 // Built with help from Claude
 import { useEffect, useState } from "react";
-import { api } from "../api";
+import { api } from "../services/api";
 import type { WeatherResponse } from "../types";
 
 export default function WeatherCard({ fieldId }: { fieldId: string }) {

@@ -1,6 +1,6 @@
 // Built with help from Claude
 import { Navigate, Outlet } from "react-router-dom";
-import { useAuth } from "../AuthContext";
+import { useAuth } from "../context/AuthContext";
 
 // Pages inside this route require a logged-in user
 export default function ProtectedRoute() {

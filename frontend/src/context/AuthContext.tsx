@@ -1,7 +1,7 @@
 // Built with help from Claude
 import { createContext, useContext, useState, type ReactNode } from "react";
-import { api, getToken, setToken } from "./api";
-import type { AuthResponse } from "./types";
+import { api, getToken, setToken } from "../services/api";
+import type { AuthResponse } from "../types";
 
 interface User {
   email: string;

@@ -1,7 +1,7 @@
 // Built with help from Claude
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { api } from "../api";
+import { api } from "../services/api";
 import type { UpcomingTask } from "../types";
 
 export default function TasksCard({ days = 14 }: { days?: number }) {

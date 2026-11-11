@@ -1,7 +1,7 @@
 // Built with help from Claude
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { api } from "../api";
+import { api } from "../services/api";
 import Calculators from "../components/Calculators";
 import RecordSection from "../components/RecordSection";
 import type {

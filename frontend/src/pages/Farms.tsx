@@ -1,7 +1,7 @@
 // Built with help from Claude
 import { useEffect, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
-import { api } from "../api";
+import { api } from "../services/api";
 import type { Farm } from "../types";
 
 export default function Farms() {

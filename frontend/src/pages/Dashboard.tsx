@@ -13,7 +13,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { api } from "../api";
+import { api } from "../services/api";
 import ChartCard from "../components/ChartCard";
 import type { DashboardData, ProfitGroup } from "../types";
 import TasksCard from "../components/TasksCard";
