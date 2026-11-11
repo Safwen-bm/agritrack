@@ -69,10 +69,15 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference(); // API docs UI at /scalar
 }
 
-app.UseHttpsRedirection();
+if (app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
 app.UseCors();
 app.UseAuthentication(); // must come before UseAuthorization
 app.UseAuthorization();
 app.MapControllers();
+
+app.MapGet("/health", () => "ok"); // used by Render's health check
 
 app.Run();
