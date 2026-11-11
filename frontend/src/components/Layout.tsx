@@ -7,20 +7,20 @@ export default function Layout() {
   const navigate = useNavigate();
 
   function handleLogout() {
-    logout();
-    navigate("/login");
-  }
+  logout();
+  window.location.assign("/");
+}
 
   return (
     <div className="min-h-screen bg-green-50">
       <nav className="bg-green-800 text-white">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-          <Link to="/" className="text-xl font-bold">
+          <Link to={user ? "/dashboard" : "/"} className="text-xl font-bold">
             AgriTrack
           </Link>
           {user && (
             <div className="flex items-center gap-4">
-              <Link to="/" className="text-sm hover:underline">
+              <Link to="/dashboard" className="text-sm hover:underline">
                 Dashboard
               </Link>
               <Link to="/farms" className="text-sm hover:underline">

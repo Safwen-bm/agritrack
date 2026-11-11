@@ -18,7 +18,7 @@ export default function Register() {
     setLoading(true);
     try {
       await register(fullName, email, password);
-      navigate("/");
+      navigate("/dashboard");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong");
     } finally {

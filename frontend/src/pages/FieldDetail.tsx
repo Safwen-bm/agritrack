@@ -65,7 +65,7 @@ export default function FieldDetail() {
     <div className="space-y-6">
       <div>
         <Link
-          to={field ? `/farms/${field.farmId}` : "/"}
+          to={field ? `/farms/${field.farmId}` : "/farms"}
           className="text-sm text-green-700 underline"
         >
           ← Back to farm
